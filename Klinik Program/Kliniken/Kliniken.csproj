@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2F9991C-D020-4C79-8DD3-F28D85F52ECE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Kliniken</RootNamespace>
+    <AssemblyName>Kliniken</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArztDaten\frmAktualisierenUndNeueArztHinzufügen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArztDaten\frmAktualisierenUndNeueArztHinzufügen.Designer.cs">
+      <DependentUpon>frmAktualisierenUndNeueArztHinzufügen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMitarbeiterDatenAnzeigen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMitarbeiterDatenAnzeigen.Designer.cs">
+      <DependentUpon>frmMitarbeiterDatenAnzeigen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MitarbeiterDaten\Contors\ctrMiratbeiterKarte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MitarbeiterDaten\Contors\ctrMiratbeiterKarte.Designer.cs">
+      <DependentUpon>ctrMiratbeiterKarte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonDaten\Controls\ctrPersonFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PersonDaten\Controls\ctrPersonFilter.Designer.cs">
+      <DependentUpon>ctrPersonFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MitarbeiterDaten\frmMitarbeiterListeAnzeigen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MitarbeiterDaten\frmMitarbeiterListeAnzeigen.Designer.cs">
+      <DependentUpon>frmMitarbeiterListeAnzeigen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobaleKlassen\clsDatenTabelleAnzeigen.cs" />
+    <Compile Include="MitarbeiterDaten\Contors\ctrMitarbeiterEinfügen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MitarbeiterDaten\Contors\ctrMitarbeiterEinfügen.Designer.cs">
+      <DependentUpon>ctrMitarbeiterEinfügen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MitarbeiterDaten\frmAktualisierenUndNeuenMitarbeiterHinzufügen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MitarbeiterDaten\frmAktualisierenUndNeuenMitarbeiterHinzufügen.Designer.cs">
+      <DependentUpon>frmAktualisierenUndNeuenMitarbeiterHinzufügen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RezepteDaten\frmAtkualisierungUndNeueRezepteHinzufügen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RezepteDaten\frmAtkualisierungUndNeueRezepteHinzufügen.Designer.cs">
+      <DependentUpon>frmAtkualisierungUndNeueRezepteHinzufügen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatumDaten\frmDatenTablleAnzeigen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatumDaten\frmDatenTablleAnzeigen.Designer.cs">
+      <DependentUpon>frmDatenTablleAnzeigen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatumDaten\frmDatumListeForPatientenAnzeigen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatumDaten\frmDatumListeForPatientenAnzeigen.Designer.cs">
+      <DependentUpon>frmDatumListeForPatientenAnzeigen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BenutzerDaten\frmPasswortÄndern.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BenutzerDaten\frmPasswortÄndern.Designer.cs">
+      <DependentUpon>frmPasswortÄndern.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientDaten\frmPatientDatenAnzeigen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientDaten\frmPatientDatenAnzeigen.Designer.cs">
+      <DependentUpon>frmPatientDatenAnzeigen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobaleKlassen\clsEventLogInWindows.cs" />
+    <Compile Include="GlobaleKlassen\clsGlobaleKlasse.cs" />
+    <Compile Include="BenutzerDaten\frmAktualisierenUndNeuenBenutzerHinzufügen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BenutzerDaten\frmAktualisierenUndNeuenBenutzerHinzufügen.Designer.cs">
+      <DependentUpon>frmAktualisierenUndNeuenBenutzerHinzufügen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BenutzerDaten\frmBenutzerDatenAnzeigen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BenutzerDaten\frmBenutzerDatenAnzeigen.Designer.cs">
+      <DependentUpon>frmBenutzerDatenAnzeigen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BenutzerDaten\frmBenutzerListeAnzeigen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BenutzerDaten\frmBenutzerListeAnzeigen.Designer.cs">
+      <DependentUpon>frmBenutzerListeAnzeigen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginScreen.Designer.cs">
+      <DependentUpon>frmLoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonDaten\Controls\ctrPersonenDatenMitFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PersonDaten\Controls\ctrPersonenDatenMitFilter.Designer.cs">
+      <DependentUpon>ctrPersonenDatenMitFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FarichtungDaten\frmFachrichtungenListeAnzeigen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FarichtungDaten\frmFachrichtungenListeAnzeigen.Designer.cs">
+      <DependentUpon>frmFachrichtungenListeAnzeigen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FarichtungDaten\frmFachrictungHinzufügenOderAkualisieren.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FarichtungDaten\frmFachrictungHinzufügenOderAkualisieren.Designer.cs">
+      <DependentUpon>frmFachrictungHinzufügenOderAkualisieren.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArztDaten\frmArztDatenAnzeigen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArztDaten\frmArztDatenAnzeigen.Designer.cs">
+      <DependentUpon>frmArztDatenAnzeigen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbrechnungsDaten\frmAktualisierenUndNeueBezahlunginzufügen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbrechnungsDaten\frmAktualisierenUndNeueBezahlunginzufügen.Designer.cs">
+      <DependentUpon>frmAktualisierenUndNeueBezahlunginzufügen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TerminDaten\frmAktualisierenUndNeuenTerminHinzufügen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TerminDaten\frmAktualisierenUndNeuenTerminHinzufügen.Designer.cs">
+      <DependentUpon>frmAktualisierenUndNeuenTerminHinzufügen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainSystemScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainSystemScreen.Designer.cs">
+      <DependentUpon>frmMainSystemScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArztDaten\frmÄrzteListeAnzeigen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArztDaten\frmÄrzteListeAnzeigen.Designer.cs">
+      <DependentUpon>frmÄrzteListeAnzeigen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TerminDaten\frmTerminenListeAnzeigen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TerminDaten\frmTerminenListeAnzeigen.Designer.cs">
+      <DependentUpon>frmTerminenListeAnzeigen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonDaten\Controls\ctrNeuPersonHinzufügen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PersonDaten\Controls\ctrNeuPersonHinzufügen.Designer.cs">
+      <DependentUpon>ctrNeuPersonHinzufügen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonDaten\Controls\ctrPersonDaten.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PersonDaten\Controls\ctrPersonDaten.Designer.cs">
+      <DependentUpon>ctrPersonDaten.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonDaten\frmAktualisierenUndNeuePersonHinzufügen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonDaten\frmAktualisierenUndNeuePersonHinzufügen.Designer.cs">
+      <DependentUpon>frmAktualisierenUndNeuePersonHinzufügen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientDaten\frmPatientListeAnzeigen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientDaten\frmPatientListeAnzeigen.Designer.cs">
+      <DependentUpon>frmPatientListeAnzeigen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientDaten\frmUpdateUndNeuPatientHinzufügen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientDaten\frmUpdateUndNeuPatientHinzufügen.Designer.cs">
+      <DependentUpon>frmUpdateUndNeuPatientHinzufügen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonDaten\frmPersonDatenAnzeigen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonDaten\frmPersonDatenAnzeigen.Designer.cs">
+      <DependentUpon>frmPersonDatenAnzeigen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonDaten\frmPersonenListeAnziegen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonDaten\frmPersonenListeAnziegen.Designer.cs">
+      <DependentUpon>frmPersonenListeAnziegen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ArztDaten\frmAktualisierenUndNeueArztHinzufügen.resx">
+      <DependentUpon>frmAktualisierenUndNeueArztHinzufügen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BenutzerDaten\frmAktualisierenUndNeuenBenutzerHinzufügen.resx">
+      <DependentUpon>frmAktualisierenUndNeuenBenutzerHinzufügen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BenutzerDaten\frmBenutzerDatenAnzeigen.resx">
+      <DependentUpon>frmBenutzerDatenAnzeigen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BenutzerDaten\frmBenutzerListeAnzeigen.resx">
+      <DependentUpon>frmBenutzerListeAnzeigen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMitarbeiterDatenAnzeigen.resx">
+      <DependentUpon>frmMitarbeiterDatenAnzeigen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MitarbeiterDaten\Contors\ctrMiratbeiterKarte.resx">
+      <DependentUpon>ctrMiratbeiterKarte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MitarbeiterDaten\Contors\ctrMitarbeiterEinfügen.resx">
+      <DependentUpon>ctrMitarbeiterEinfügen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonDaten\Controls\ctrPersonFilter.resx">
+      <DependentUpon>ctrPersonFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MitarbeiterDaten\frmAktualisierenUndNeuenMitarbeiterHinzufügen.resx">
+      <DependentUpon>frmAktualisierenUndNeuenMitarbeiterHinzufügen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RezepteDaten\frmAtkualisierungUndNeueRezepteHinzufügen.resx">
+      <DependentUpon>frmAtkualisierungUndNeueRezepteHinzufügen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatumDaten\frmDatenTablleAnzeigen.resx">
+      <DependentUpon>frmDatenTablleAnzeigen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatumDaten\frmDatumListeForPatientenAnzeigen.resx">
+      <DependentUpon>frmDatumListeForPatientenAnzeigen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginScreen.resx">
+      <DependentUpon>frmLoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BenutzerDaten\frmPasswortÄndern.resx">
+      <DependentUpon>frmPasswortÄndern.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MitarbeiterDaten\frmMitarbeiterListeAnzeigen.resx">
+      <DependentUpon>frmMitarbeiterListeAnzeigen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientDaten\frmPatientDatenAnzeigen.resx">
+      <DependentUpon>frmPatientDatenAnzeigen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonDaten\Controls\ctrPersonenDatenMitFilter.resx">
+      <DependentUpon>ctrPersonenDatenMitFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FarichtungDaten\frmFachrichtungenListeAnzeigen.resx">
+      <DependentUpon>frmFachrichtungenListeAnzeigen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FarichtungDaten\frmFachrictungHinzufügenOderAkualisieren.resx">
+      <DependentUpon>frmFachrictungHinzufügenOderAkualisieren.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArztDaten\frmArztDatenAnzeigen.resx">
+      <DependentUpon>frmArztDatenAnzeigen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbrechnungsDaten\frmAktualisierenUndNeueBezahlunginzufügen.resx">
+      <DependentUpon>frmAktualisierenUndNeueBezahlunginzufügen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TerminDaten\frmAktualisierenUndNeuenTerminHinzufügen.resx">
+      <DependentUpon>frmAktualisierenUndNeuenTerminHinzufügen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainSystemScreen.resx">
+      <DependentUpon>frmMainSystemScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArztDaten\frmÄrzteListeAnzeigen.resx">
+      <DependentUpon>frmÄrzteListeAnzeigen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TerminDaten\frmTerminenListeAnzeigen.resx">
+      <DependentUpon>frmTerminenListeAnzeigen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonDaten\Controls\ctrNeuPersonHinzufügen.resx">
+      <DependentUpon>ctrNeuPersonHinzufügen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonDaten\Controls\ctrPersonDaten.resx">
+      <DependentUpon>ctrPersonDaten.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonDaten\frmAktualisierenUndNeuePersonHinzufügen.resx">
+      <DependentUpon>frmAktualisierenUndNeuePersonHinzufügen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientDaten\frmPatientListeAnzeigen.resx">
+      <DependentUpon>frmPatientListeAnzeigen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientDaten\frmUpdateUndNeuPatientHinzufügen.resx">
+      <DependentUpon>frmUpdateUndNeuPatientHinzufügen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonDaten\frmPersonDatenAnzeigen.resx">
+      <DependentUpon>frmPersonDatenAnzeigen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonDaten\frmPersonenListeAnziegen.resx">
+      <DependentUpon>frmPersonenListeAnziegen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\clsHilfsMethoden\HilfsMethoden.csproj">
+      <Project>{0461c194-ce2d-40a6-a75e-fdf9a29e6383}</Project>
+      <Name>HilfsMethoden</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KlinkDatenSchicht\KlinkDatenSchicht.csproj">
+      <Project>{1995a428-3213-4388-85a6-285c1d37b46c}</Project>
+      <Name>KlinkDatenSchicht</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\account_settings 64.png" />
+    <Content Include="Resources\Add New User 32.png" />
+    <Content Include="Resources\Add New User 72.png" />
+    <Content Include="Resources\Add Person 40.png" />
+    <Content Include="Resources\Add Person 72.png" />
+    <Content Include="Resources\AddAppointment 32.png" />
+    <Content Include="Resources\AddPerson 32.png" />
+    <Content Include="Resources\Address 32.png" />
+    <Content Include="Resources\Application Types 512.png" />
+    <Content Include="Resources\Application Types 64.png" />
+    <Content Include="Resources\Applications 64.png" />
+    <Content Include="Resources\Applications.png" />
+    <Content Include="Resources\ApplicationTitle.png" />
+    <Content Include="Resources\ApplicationType.png" />
+    <None Include="Resources\appointment.png" />
+    <Content Include="Resources\Calendar 32.png" />
+    <Content Include="Resources\call 32.png" />
+    <Content Include="Resources\Cars 48.png" />
+    <Content Include="Resources\Close 32.png" />
+    <Content Include="Resources\Close 64.png" />
+    <Content Include="Resources\CloseBlack.png" />
+    <Content Include="Resources\closeBlack32.png" />
+    <Content Include="Resources\Count 32.png" />
+    <Content Include="Resources\Country 32.png" />
+    <Content Include="Resources\cross 32.png" />
+    <Content Include="Resources\cross 64.png" />
+    <Content Include="Resources\Damaged Driving License 32.png" />
+    <Content Include="Resources\Delete 32 2.png" />
+    <Content Include="Resources\Delete 32.png" />
+    <Content Include="Resources\Delete User 32.png" />
+    <Content Include="Resources\Detain 32.png" />
+    <Content Include="Resources\Detain 512.png" />
+    <Content Include="Resources\Detain 64.png" />
+    <Content Include="Resources\Detained Driving License 32.png" />
+    <None Include="Resources\doctor %281%29.png" />
+    <Content Include="Resources\doctor-patient.png" />
+    <None Include="Resources\doctor.png" />
+    <Content Include="Resources\Driver License 48.png" />
+    <Content Include="Resources\Driver Main.png" />
+    <Content Include="Resources\Drivers 64.png" />
+    <Content Include="Resources\driving-test 512.png" />
+    <Content Include="Resources\DVLD Logo.png" />
+    <Content Include="Resources\edit 32.png" />
+    <Content Include="Resources\Edit User 32.png" />
+    <Content Include="Resources\Email 32.png" />
+    <Content Include="Resources\Exit 64.png" />
+    <Content Include="Resources\Faild.png" />
+    <Content Include="Resources\Female 512.png" />
+    <None Include="Resources\hospitalisation.png" />
+    <Content Include="Resources\IconLogo.png" />
+    <Content Include="Resources\International 32.png" />
+    <Content Include="Resources\IssueDrivingLicense 32.png" />
+    <Content Include="Resources\License Type 32.png" />
+    <Content Include="Resources\License View 32.png" />
+    <Content Include="Resources\LicenseView 400.png" />
+    <Content Include="Resources\List 32.png" />
+    <Content Include="Resources\Local 32.png" />
+    <Content Include="Resources\Local Driving License 512.png" />
+    <Content Include="Resources\LocalDriving License.png" />
+    <Content Include="Resources\Logo Final.jpg" />
+    <Content Include="Resources\Lost Driving License 32.png" />
+    <Content Include="Resources\Male 512.png" />
+    <Content Include="Resources\Man 32.png" />
+    <Content Include="Resources\Manage Applications 32.png" />
+    <Content Include="Resources\Manage Applications 64.png" />
+    <Content Include="Resources\Manage People.png" />
+    <Content Include="Resources\medical-record %281%29.png" />
+    <Content Include="Resources\medical-record.png" />
+    <Content Include="Resources\medical-records.png" />
+    <None Include="Resources\medical-team.png" />
+    <None Include="Resources\medical-team %284%29.png" />
+    <None Include="Resources\mensch.png" />
+    <None Include="Resources\mensch1.png" />
+    <None Include="Resources\mitarbeiter %281%29.png" />
+    <None Include="Resources\mitarbeiter %282%29.png" />
+    <None Include="Resources\mitarbeiter %283%29.png" />
+    <None Include="Resources\mitarbeiter.png" />
+    <Content Include="Resources\money 32 - 2.png" />
+    <Content Include="Resources\money 32.png" />
+    <Content Include="Resources\New Application 64.png" />
+    <Content Include="Resources\New Driving License 32.png" />
+    <Content Include="Resources\Next 32.png" />
+    <Content Include="Resources\Next 64.png" />
+    <Content Include="Resources\Notes 32.png" />
+    <Content Include="Resources\Number 32.png" />
+    <Content Include="Resources\Passed.png" />
+    <Content Include="Resources\PassedTests 32.png" />
+    <Content Include="Resources\Password 32.png" />
+    <Content Include="Resources\patient %281%29.png" />
+    <None Include="Resources\patient %281%291.png" />
+    <Content Include="Resources\patient %282%29.png" />
+    <Content Include="Resources\patient.png" />
+    <Content Include="Resources\People 400.png" />
+    <Content Include="Resources\People 512.png" />
+    <Content Include="Resources\People 64.png" />
+    <Content Include="Resources\Person 32.png" />
+    <Content Include="Resources\PersonDetails 32.png" />
+    <Content Include="Resources\PersonLicenseHistory 32.png" />
+    <Content Include="Resources\PersonLicenseHistory 512.png" />
+    <Content Include="Resources\Phone 32.png" />
+    <Content Include="Resources\Prev 32.png" />
+    <Content Include="Resources\Prev 64.png" />
+    <Content Include="Resources\Question 32.png" />
+    <Content Include="Resources\Release Detained License 32.png" />
+    <Content Include="Resources\Release Detained License 512.png" />
+    <Content Include="Resources\Release Detained License 64.png" />
+    <Content Include="Resources\Renew Driving License 32.png" />
+    <Content Include="Resources\Retake Test 32.png" />
+    <Content Include="Resources\Save 32.png" />
+    <Content Include="Resources\Schedule Test 32.png" />
+    <Content Include="Resources\Schedule Test 512.png" />
+    <Content Include="Resources\SearchPerson.png" />
+    <Content Include="Resources\send email 32.png" />
+    <Content Include="Resources\Sign Out 32.png" />
+    <Content Include="Resources\SignOut 64.png" />
+    <Content Include="Resources\sign_in 32.png" />
+    <Content Include="Resources\sign_out 32 -2.png" />
+    <Content Include="Resources\Street Test 32.png" />
+    <Content Include="Resources\Test 32.png" />
+    <Content Include="Resources\Test Type 64.png" />
+    <Content Include="Resources\TestType 32.png" />
+    <Content Include="Resources\TestType 512.png" />
+    <Content Include="Resources\User 32 -2.png" />
+    <Content Include="Resources\Users 2 400.png" />
+    <Content Include="Resources\Users 2 64.png" />
+    <Content Include="Resources\users 64.png" />
+    <Content Include="Resources\Vision 512.png" />
+    <Content Include="Resources\Vision Test 32.png" />
+    <Content Include="Resources\Vision Test Schdule.png" />
+    <Content Include="Resources\wallpaper.jpg" />
+    <Content Include="Resources\WallPaper2.jpg" />
+    <Content Include="Resources\Woman 32.png" />
+    <Content Include="Resources\Written Test 32 Sechdule.png" />
+    <Content Include="Resources\Written Test 32.png" />
+    <Content Include="Resources\Written Test 512.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

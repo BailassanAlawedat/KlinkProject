@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1995A428-3213-4388-85A6-285C1D37B46C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KlinkDatenSchicht</RootNamespace>
+    <AssemblyName>KlinkDatenSchicht</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsArztDaten.cs" />
+    <Compile Include="clsBenutzerDaten.cs" />
+    <Compile Include="clsBezahlungDaten.cs" />
+    <Compile Include="clsDatumDaten.cs" />
+    <Compile Include="clsFachrichtungenDaten.cs" />
+    <Compile Include="clsKüchenPersonalDaten.cs" />
+    <Compile Include="clsLänderDaten.cs" />
+    <Compile Include="clsMitarbeiterDaten.cs" />
+    <Compile Include="clsPatientDaten.cs" />
+    <Compile Include="clsPersonal.cs" />
+    <Compile Include="clsPersonDaten.cs" />
+    <Compile Include="clsReinigungsPersonalDaten.cs" />
+    <Compile Include="clsRezeptDaten.cs" />
+    <Compile Include="clsSicherheitsdienstDaten.cs" />
+    <Compile Include="clsTerminDaten.cs" />
+    <Compile Include="clsTransportdienstDaten.cs" />
+    <Compile Include="clsVersicherungDaten.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\clsHilfsMethoden\HilfsMethoden.csproj">
+      <Project>{0461c194-ce2d-40a6-a75e-fdf9a29e6383}</Project>
+      <Name>HilfsMethoden</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KlinikDatenZugriffsSchicht\KlinikDatenZugriffsSchicht.csproj">
+      <Project>{3dbe3d48-a083-4e39-9e30-592d0c26f2c8}</Project>
+      <Name>KlinikDatenZugriffsSchicht</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
